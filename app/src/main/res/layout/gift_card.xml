@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/idGiftCardLayout">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/idLoadBtnLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <EditText
+                    android:id="@+id/idGiftCardAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/field_background"
+                    android:hint="Enter Amount"
+                    android:inputType="number"
+                    android:paddingLeft="65dp"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/idFNameIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="Rs:"
+                    android:textSize="30sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/idGiftCardBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Your Balance Rs: 0"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/gift" />
+
+            <Button
+                android:id="@+id/idGiftCardCollectGift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/dark_btn"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Collect A Gift" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/idLoadBtnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/idGiftCardLoadBalance"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="@drawable/background_blur"
+            android:clickable="true"
+            android:text="Load Balance" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

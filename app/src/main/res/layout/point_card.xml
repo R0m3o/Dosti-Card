@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/idPointCardLayout">
+
+    <ScrollView
+        android:id="@+id/idScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/idCollectPointLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:paddingTop="8dp"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="46"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/idPointCardEarnedPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Points You Gain: 0"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/idPointCardReservedAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reserved Amount Rs: 0"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="2mm"
+                android:layout_weight="44">
+
+                <EditText
+                    android:id="@+id/idPointCardPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/field_background"
+                    android:hint="Enter Payment"
+                    android:inputType="number"
+                    android:paddingLeft="65dp"
+                    android:singleLine="true"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/idFNameIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="Rs:"
+                    android:textSize="30dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.5"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+
+                        <View
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/circle"/>
+
+                        <ProgressBar
+                            android:id="@+id/idPointCardProgressBar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_centerInParent="true"
+                            android:indeterminate="false"
+                            android:max="15"
+                            android:progress="12"
+                            android:progressDrawable="@drawable/circular_progress"
+                            android:rotation="90"/>
+
+                        <TextView
+                            android:id="@+id/idPointCardGainedPoints"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="12/15"
+                            android:textSize="20sp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/background_blur"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Rewards"
+                            android:textSize="27sp" />
+
+                        <TextView
+                            android:id="@+id/idPointCardLeftPoints"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textSize="32sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Points Until" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="Next Reward"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/point_basket"
+                        android:scaleType="centerInside"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.5"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="5dp">
+
+                    <Button
+                        android:id="@+id/idPointCardRedeem"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dark_btn"
+                        android:clickable="true"
+                        android:text="Redeem Reward" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/idNoOfRewards"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:text="0"
+        android:background="@drawable/reward"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"/>
+
+    <RelativeLayout
+        android:id="@+id/idCollectPointLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/idPointCardCollectPoint"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_blur"
+            android:clickable="true"
+            android:text="Collect Points" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

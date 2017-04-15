@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dark_background"
+    android:orientation="vertical"
+    android:weightSum="100"
+    android:id="@+id/idCustomerProfileLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="89"
+        android:background="@drawable/field_background"
+        android:orientation="vertical"
+        android:weightSum="50">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/idCustomerProfilePic"
+                android:layout_width="78dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/user_profile_icon" />
+
+            <TextView
+                android:id="@+id/idCustomerProfileName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/idHistory"
+                android:layout_toRightOf="@+id/idCustomerProfilePic"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:text="Name"
+                android:textSize="25dp" />
+
+            <LinearLayout
+                android:id="@+id/idHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/idCustomerProfileGainedPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text=" Points: 0"
+                    android:layout_gravity="right"/>
+
+                <TextView
+                    android:id="@+id/idCustomerProfileBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:text="Balance: 0"
+                    android:layout_gravity="right"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/separator" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="11"
+        android:background="@drawable/background_blur">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/idCustomerMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/background_blur" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/idCustomerViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/idCustomerMenu"
+            android:layout_gravity="center_horizontal" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
